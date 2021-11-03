@@ -5,15 +5,12 @@ tipoDieta(proteica).
 tipoDieta(vegana).
 tipoDieta(alcalina).
 tipoDieta(frugivora).
-tipoDieta(blanca).
-tipoDieta(sinazucar).
-tipoDieta(bajaengrasa).
 
 % Padecimientos: [nombre, descripcion]
 padecimiento([dislipidemia, "problemas del control del colesterol"]).
 padecimiento([diabetes, "problemas de insulina en la sangre"]).
 padecimiento([sobrepeso, "peso relativamente excesivo por acumulacion de grasa"]).
-padecimiento([blanqueamiento, "blanqueamiento dental reciente"]).
+
 
 % Actividad fisica semanal: [nivel, dias minimos, dias maximos]
 nivelesActividad([inicial, 0, 2]).
@@ -28,15 +25,25 @@ calorias(3000).
 
 
 % Dietas: [Nombre, tipo, calorias, recomendaciones, detalles].
-dieta("Baja en grasa 1", tipoDieta(bajaengrasa), calorias(1500),
+dieta("Baja en grasa 1", tipoDieta(vegana), calorias(1500),
                             padecimiento(sobrepeso), padecimiento(blanqueamiento), % Recomendado, No recomendado
                             nivelesActividad(inicial), nivelesActividad(avanzado), % Recomendado, No recomendado
                         "Desayuno1, Almuerzo1, Cena1").
 
-dieta("Baja en grasa 2", tipoDieta(bajaengrasa), calorias(2000), 
+dieta("Baja en grasa 2", tipoDieta(vegana), calorias(2000), 
                             padecimiento(sobrepeso), padecimiento(blanqueamiento), % Recomendado, No recomendado
                             nivelesActividad(inicial), nivelesActividad(avanzado), % Recomendado , No recomendado
                     "Desayuno2, Almuerzo2, Cena2").
+
+dieta("Baja en grasa 3", tipoDieta(vegana), calorias(2000), 
+                padecimiento(sobrepeso), padecimiento(blanqueamiento), % Recomendado, No recomendado
+                nivelesActividad(inicial), nivelesActividad(avanzado), % Recomendado , No recomendado
+        "Desayuno2, Almuerzo2, Cena2").
+
+dieta("Baja en grasa 4", tipoDieta(vegana), calorias(2000), 
+                padecimiento(sobrepeso), padecimiento(blanqueamiento), % Recomendado, No recomendado
+                nivelesActividad(inicial), nivelesActividad(avanzado), % Recomendado , No recomendado
+            "Desayuno2, Almuerzo2, Cena2").
 
 
 % Confirma que el tipo de dieta sea el mismo
