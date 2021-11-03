@@ -1,6 +1,3 @@
-miembro(Value, [Value|_]).
-miembro(Value, [_|Tail]) :- miembro(Value, Tail).
-
 
 % Tipos de dieta
 tipoDieta(keto).
